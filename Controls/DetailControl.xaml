@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="SharePoint.Controls.DetailControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:SharePoint.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="MinHeight" Value="30"/>
+            <Setter Property="Background" Value="SteelBlue"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0 -1 -0.5 0"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="Foreground" Value="#D0D0D0"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="MinWidth" Value="105"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <Border BorderBrush="Gray" Background="#1A1A1A" BorderThickness="0.5" Margin="0 0 10 10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="PartID:" Grid.Row="0"/>
+            <TextBlock Text="Part Description:" Grid.Row="1"/>
+            <TextBlock Text="Zone" Grid.Row="2"/>
+            <TextBlock Text="Address:" Grid.Row="3"/>
+            <TextBlock Text="Location:" Grid.Row="4"/>
+            <TextBlock Text="Item Number:" Grid.Row="5"/>
+            <TextBlock Text="Weight:" Grid.Row="6"/>
+            <TextBlock Text="Size:" Grid.Row="7"/>
+            <TextBlock Text="Owner:" Grid.Row="8"/>
+            <TextBlock Text="Phone Number:" Grid.Row="9"/>
+            <TextBlock Text="eMail:" Grid.Row="10"/>
+            <TextBlock Text="Comment:" Grid.Row="11"/>
+
+            <TextBox Text="{Binding Detail.Item.PartID, UpdateSourceTrigger=Default, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.PartDescription}" Grid.Row="1" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.Zone}" Grid.Row="2" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.Address}" Grid.Row="3" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.Location}" Grid.Row="4" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.ItemNumber}" Grid.Row="5" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.Weight}" Grid.Row="6" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.Size}" Grid.Row="7" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.Owner}" Grid.Row="8" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.PhoneNumber}" Grid.Row="9" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.eMail}" Grid.Row="10" Grid.Column="1"/>
+            <TextBox Text="{Binding Detail.Item.Comment}" Height="220" Grid.Row="11" Grid.Column="1"/>
+
+            <Grid Grid.Row="12" Grid.ColumnSpan="2">
+                <controls:DetailImageControl DataContext="{Binding Detail, Mode=OneWay}"/>
+            </Grid>
+
+        </Grid>
+    </Border>
+</UserControl>

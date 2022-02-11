@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{DynamicResource ButtonBorderColor}"/>
+    <SolidColorBrush x:Key="ButtonBorderDarkBrush" Color="{DynamicResource ButtonBorderDark}"/>
+    <SolidColorBrush x:Key="ButtonGradientStartBrush" Color="{DynamicResource ButtonGradientStart}"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBorderBrush" Color="{DynamicResource ButtonMouseOverBorderColor}"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBackgroundBrush" Color="{DynamicResource ButtonMouseOverBackground}"/>
+
+    <SolidColorBrush x:Key="ListItemForeground" Color="{DynamicResource DefaultItemForeground}"/>
+    <SolidColorBrush x:Key="MenuTextBrush" Color="{DynamicResource MenuTextColor}"/>
+    <SolidColorBrush x:Key="MenuDisabledTextBrush" Color="{DynamicResource MenuDisabledTextForeGround}"/>
+    <SolidColorBrush x:Key="FirstColorNormal" Color="{DynamicResource FirstColorBrush}"/>
+    <SolidColorBrush x:Key="FirstColorLight" Color="{DynamicResource FirstColorLightBrush}"/>
+    <SolidColorBrush x:Key="PrimaryBackground" Color="{DynamicResource PrimaryBackgroundBrush}"/>
+    <SolidColorBrush x:Key="SecondBackground" Color="{DynamicResource SecondBackgroundBrush}"/>
+    <SolidColorBrush x:Key="StandardTextColor" Color="{DynamicResource StandardTextForeground}"/>
+    <SolidColorBrush x:Key="ListViewItemBackground" Color="{DynamicResource ListViewItemBackgroundBrush}"/>
+    <SolidColorBrush x:Key="ListViewItemForeground" Color="{DynamicResource ListViewItemForegroundBrush}"/>
+    <SolidColorBrush x:Key="FirstItemBackground" Color="{DynamicResource FirstBackgroundBrush}"/>
+    <SolidColorBrush x:Key="PlaylistBackground" Color="{DynamicResource PlaylistBackgroundBrush}"/>
+    <SolidColorBrush x:Key="PlaylistItemBackground" Color="{DynamicResource PlaylistItemBackgroundBrush}"/>
+
+    <SolidColorBrush x:Key="GridAlternateBrush" Color="{DynamicResource GridAlternateColor}"/>
+    <SolidColorBrush x:Key="GridSelectionBrush" Color="{DynamicResource GridSelectionColor}"/>
+
+</ResourceDictionary>
